@@ -12,20 +12,7 @@
   <body>
     <div class="container">
       <h1><%= title %></h1>
-
-      <form>
-        <div class="form-group">
-          <label for="exampleCSVinput">CSV</label>
-          <textarea name="CSV" rows="8" cols="40" class='form-control'></textarea>
-        </div>
-      </form>
-
-      <div>
-        <button type="button" class="btn btn-primary">Convert</button>
-      </div>
-
-
-      {{ 8*8 }}
+      <ui-view></ui-view>
     </div>
 
   </body>
