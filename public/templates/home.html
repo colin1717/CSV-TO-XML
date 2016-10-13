@@ -1,10 +1,10 @@
 <form>
   <div class="form-group">
     <label for="exampleCSVinput">CSV</label>
-    <textarea name="CSV" rows="8" cols="40" class='form-control'></textarea>
+    <textarea ng-model='csv.input' name="CSV" rows="8" cols="40" class='form-control'></textarea>
   </div>
 </form>
 
 <div>
-  <button ui-sref='output' type="button" class="btn btn-primary">Convert</button>
+  <button ng-if='csv.input.length > 0' ui-sref='output' type="button" class="btn btn-primary">Convert</button>
 </div>
