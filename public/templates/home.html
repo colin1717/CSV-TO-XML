@@ -1,7 +1,10 @@
 <form>
   <div class="form-group">
-    <label for="exampleCSVinput">CSV</label>
-    <textarea ng-model='csv.csvInput' name="CSV" rows="8" cols="40" class='form-control'></textarea>
+    <label for="clientName">Client Name</label>
+    <input ng-model='csv.clientName' type="text" class='form-control' name="clientName" placeholder="Client name to define in feed header">
+    <br>
+    <label for="CSVinput">CSV</label>
+    <textarea ng-model='csv.csvInput' name="CSV" rows="8" cols="40" class='form-control' placeholder='Paste CSV here'></textarea>
   </div>
 </form>
 

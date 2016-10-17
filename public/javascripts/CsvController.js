@@ -8,6 +8,8 @@ function CsvController () {
 
   var self = this;
 
+  this.clientName = '';
+
   this.csvInput = '';
 
   this.stringToJSON = function(){
@@ -15,7 +17,7 @@ function CsvController () {
   };
 
   this.jsonToXml = function(){
-    self.xmlOutput = '<?xml version="1.0" encoding="utf-8"?><Feed xmlns="http://www.bazaarvoice.com/xs/PRR/StandardClientFeed/5.6" name="ExampleClient" extractDate="2012-02-12T05:17:33.945-06:00">';
+    self.xmlOutput = '<?xml version="1.0" encoding="utf-8"?><Feed xmlns="http://www.bazaarvoice.com/xs/PRR/StandardClientFeed/5.6" name="' + self.clientName + '" extractDate="2012-02-12T05:17:33.945-06:00">';
 
     for (var i = 1; i < (self.jsonOutput.data.length); i++){
       // self.xmlOutput += '<Product id="' + {self.jsonOutput.data[i][4]} + '">';
