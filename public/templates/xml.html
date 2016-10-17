@@ -1,7 +1,8 @@
 <h5>XML</h5>
 <div class="well">
-  <p>{{ csv.xmlOutput }}</p>
+  <p>{{ csv.xmlOutput | limitTo : 900 }}...</p>
 </div>
 <div>
+  <button type="button" ngclipboard data-clipboard-text='{{ csv.xmlOutput }}' class="btn btn-success">Copy XML to clipboard</button>
   <button ui-sref='home' type="button" class="btn btn-danger">Try Again</button>
 </div>
