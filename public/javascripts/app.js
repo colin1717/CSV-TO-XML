@@ -10,9 +10,9 @@ angular
         url: '/',
         templateUrl: '../templates/home.html'
       })
-      .state('output', {
-        url: '/output',
-        templateUrl: '../templates/output.html'
+      .state('json', {
+        url: '/json',
+        templateUrl: '../templates/json.html'
       });
 
       $urlRouterProvider.otherwise('/');
