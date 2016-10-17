@@ -13,6 +13,10 @@ angular
       .state('json', {
         url: '/json',
         templateUrl: '../templates/json.html'
+      })
+      .state('xml', {
+        url: '/xml',
+        templateUrl: '../templates/xml.html'
       });
 
       $urlRouterProvider.otherwise('/');
