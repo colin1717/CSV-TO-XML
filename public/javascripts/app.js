@@ -1,8 +1,9 @@
 angular
-    .module('CsvToXml', ['ui.router'])
+    .module('CsvToXml', ['ui.router', 'ngPapaParse'])
     .config(MainRouter);
 
   MainRouter.$inject = ['$stateProvider', '$urlRouterProvider'];
+
   function MainRouter($stateProvider, $urlRouterProvider){
     $stateProvider
       .state('home', {
