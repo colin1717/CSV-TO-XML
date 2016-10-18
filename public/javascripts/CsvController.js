@@ -57,5 +57,16 @@ function CsvController ($scope, $filter) {
 
   this.xmlOutput = 'something went wrong with xml conversion';
 
+  $scope.onSuccess = function(e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
 
+    e.clearSelection();
+  };
+
+  $scope.onError = function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+  }
 }
