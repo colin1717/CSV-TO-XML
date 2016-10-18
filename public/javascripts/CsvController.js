@@ -42,10 +42,6 @@ function CsvController ($scope, $filter) {
       +'</Reviews>'
       + "</Product>";
 
-      console.log('====year===');
-      console.log(self.jsonOutput.data[i][0].slice(6,8));
-      console.log('====month===');
-      console.log(self.jsonOutput.data[i][0].slice(0,2));
     }
 
     self.xmlOutput += '</Feed>';
