@@ -36,11 +36,16 @@ function CsvController ($scope, $filter) {
       +'<Rating>' + self.jsonOutput.data[i][7] + '</Rating>'
       +'<IpAddress>' + self.jsonOutput.data[i][6] + '</IpAddress>'
       +'<ReviewerLocation>' + self.jsonOutput.data[i][5] + '</ReviewerLocation>'
-      +'<SubmissionTime>' + self.jsonOutput.data[i][0] + '</SubmissionTime>'
+      +'<SubmissionTime>20' + self.jsonOutput.data[i][0].slice(6,8) + '-' + self.jsonOutput.data[i][0].slice(0,2) + '-' + self.jsonOutput.data[i][0].slice(3,5) + 'T' + self.extractDate.slice(-14) + '</SubmissionTime>'
 
       +'</Review>'
       +'</Reviews>'
       + "</Product>";
+
+      console.log('====year===');
+      console.log(self.jsonOutput.data[i][0].slice(6,8));
+      console.log('====month===');
+      console.log(self.jsonOutput.data[i][0].slice(0,2));
     }
 
     self.xmlOutput += '</Feed>';
