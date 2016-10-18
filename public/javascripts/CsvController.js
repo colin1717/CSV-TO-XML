@@ -2,9 +2,9 @@ angular
     .module('CsvToXml')
     .controller('CsvController', CsvController);
 
-    CsvController.$inject = ['Papa'];
+    CsvController.$inject = ['$scope','$filter','Papa'];
 
-function CsvController () {
+function CsvController ($scope, $filter) {
 
   var self = this;
 
@@ -12,12 +12,14 @@ function CsvController () {
 
   this.csvInput = '';
 
+  this.extractDate = $filter('date')(new Date(), 'yyyy-MM-ddTHH:mm:ss.sssZ');
+
   this.stringToJSON = function(){
     self.jsonOutput = Papa.parse(self.csvInput);
   };
 
   this.jsonToXml = function(){
-    self.xmlOutput = '<?xml version="1.0" encoding="utf-8"?><Feed xmlns="http://www.bazaarvoice.com/xs/PRR/StandardClientFeed/5.6" name="' + self.clientName + '" extractDate="2012-02-12T05:17:33.945-06:00">';
+    self.xmlOutput = '<?xml version="1.0" encoding="utf-8"?><Feed xmlns="http://www.bazaarvoice.com/xs/PRR/StandardClientFeed/5.6" name="' + self.clientName + '" extractDate="' + self.extractDate + '">';
 
     for (var i = 1; i < (self.jsonOutput.data.length); i++){
       // self.xmlOutput += '<Product id="' + {self.jsonOutput.data[i][4]} + '">';
