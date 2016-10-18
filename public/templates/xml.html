@@ -3,6 +3,7 @@
   <p>{{ csv.xmlOutput | limitTo : 900 }}...</p>
 </div>
 <div>
-  <button type="button" ngclipboard data-clipboard-text='{{ csv.xmlOutput }}' ngclipboard-error="onError(e);" class="btn btn-primary">Copy XML to clipboard</button>
+  <button type="button" ng-click='csv.createXmlDoc()' class="btn btn-primary">Download XML</button>
+  <button type="button" ngclipboard data-clipboard-text='{{ csv.xmlOutput }}' ngclipboard-error="onError(e);" class="btn btn-secondary">Copy XML to clipboard</button>
   <button ui-sref='home' type="button" class="btn btn-danger">Try Again</button>
 </div>

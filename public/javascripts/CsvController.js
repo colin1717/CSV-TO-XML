@@ -24,7 +24,7 @@ function CsvController ($scope, $filter) {
     for (var i = 1; i < (self.jsonOutput.data.length); i++){
       // self.xmlOutput += '<Product id="' + {self.jsonOutput.data[i][4]} + '">';
       self.xmlOutput += '<Product id="' + self.jsonOutput.data[i][4] +
-      '"><ExternalId>'+ self.jsonOutput.data[i][4] +'</ExternalID>' +
+      '"><ExternalId>'+ self.jsonOutput.data[i][4] +'</ExternalId>' +
       '<Reviews>' +
       '<Review>' +
       '<ModerationStatus>' + self.jsonOutput.data[i][8] + '</ModerationStatus>'
@@ -57,16 +57,32 @@ function CsvController ($scope, $filter) {
 
   this.xmlOutput = 'something went wrong with xml conversion';
 
-  $scope.onSuccess = function(e) {
-    console.info('Action:', e.action);
-    console.info('Text:', e.text);
-    console.info('Trigger:', e.trigger);
-
-    e.clearSelection();
-  };
+  // $scope.onSuccess = function(e) {
+  //   console.info('Action:', e.action);
+  //   console.info('Text:', e.text);
+  //   console.info('Trigger:', e.trigger);
+  //
+  //   e.clearSelection();
+  // };
 
   $scope.onError = function(e) {
     console.error('Action:', e.action);
     console.error('Trigger:', e.trigger);
+  }
+
+  this.createXmlDoc = function(){
+    var blob = new Blob([self.xmlOutput], {type: "text/xml"});
+    console.log(blob);
+    var textToSaveAsURL = window.URL.createObjectURL(blob);
+
+    var downloadLink = document.createElement("a");
+    downloadLink.download = (self.clientName + '-content-import.xml');
+    downloadLink.innerHTML = "Download File";
+    downloadLink.href = textToSaveAsURL;
+    //downloadLink.onclick = document.body.removeChild(event.target);
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+
+    downloadLink.click();
   }
 }
