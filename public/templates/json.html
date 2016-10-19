@@ -1,8 +1,9 @@
-<h5>JSON</h5>
-<div class="well">
-  <p>{{ csv.jsonOutput | limitTo : 900 }}</p>
-</div>
 <div>
   <button ng-click='csv.jsonToXml()' ui-sref='xml' type="button" class="btn btn-primary">Convert</button>
   <button ui-sref='home' type="button" class="btn btn-danger">Try Again</button>
+</div>
+<br>
+<h5>JSON</h5>
+<div class="well">
+  <p>{{ csv.jsonOutput | limitTo : 900 }}</p>
 </div>
