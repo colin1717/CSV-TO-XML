@@ -12,7 +12,7 @@ function CsvController ($scope, $filter) {
 
   this.csvInput = '';
 
-  this.extractDate = $filter('date')(new Date(), 'yyyy-MM-ddTHH:mm:ss.sssZ');
+  this.extractDate = $filter('date')(new Date(), 'yyyy-MM-ddTHH:mm:ss.sss' + '-05:00');
 
   this.stringToJSON = function(){
     self.jsonOutput = Papa.parse(self.csvInput);
