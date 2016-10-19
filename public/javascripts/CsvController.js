@@ -32,7 +32,7 @@ function CsvController ($scope, $filter) {
       +'<ExternalId>' + self.jsonOutput.data[i][3] + '</ExternalId>'
       +'</UserProfileReference>'
       +'<Title>' + self.jsonOutput.data[i][1] + '</Title>'
-      +'<ReviewText>' + self.jsonOutput.data[i][2] + '</ReviewText>'
+      +'<ReviewText><![CDATA[ ' + self.jsonOutput.data[i][2] + ']]></ReviewText>'
       +'<Rating>' + self.jsonOutput.data[i][7] + '</Rating>'
       +'<IpAddress>' + self.jsonOutput.data[i][6] + '</IpAddress>'
       +'<ReviewerLocation>' + self.jsonOutput.data[i][5] + '</ReviewerLocation>'
@@ -49,14 +49,11 @@ function CsvController ($scope, $filter) {
     console.log(self.jsonOutput.data);
   }
 
-  this.parseJson = function(){
-
-  }
-
   this.jsonOutput = 'something went wrong with json conversion';
 
   this.xmlOutput = 'something went wrong with xml conversion';
 
+  //clipboard callbacks
   // $scope.onSuccess = function(e) {
   //   console.info('Action:', e.action);
   //   console.info('Text:', e.text);
