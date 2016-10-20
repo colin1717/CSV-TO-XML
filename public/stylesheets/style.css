@@ -1,2 +1,8 @@
-.tabbed {
-  margin-left: 10px; }
+#default-order {
+  display: flex;
+  justify-content: space-around; }
+
+#custom-order {
+  display: flex;
+  justify-content: space-around;
+  min-height: 75px; }

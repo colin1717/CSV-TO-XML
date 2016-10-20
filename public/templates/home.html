@@ -1,5 +1,22 @@
 <form>
+
   <div class="form-group">
+    <div>
+      <label for="columnOrder">CSV Column Order</label>
+      <div id='default-order' class="well">
+        <button type="button" class="btn btn-outline-secondary">SubmissionTime</button>
+        <button type="button" class="btn sort-button btn-outline-secondary">Title</button>
+        <button type="button" class="btn sort-button btn-outline-secondary">ReviewText</button>
+        <button type="button" class="btn sort-button btn-outline-secondary">DisplayName</button>
+        <button type="button" class="btn sort-button btn-outline-secondary">ExternalId</button>
+        <button type="button" class="btn sort-button btn-outline-secondary">ReviewerLocation</button>
+        <button type="button" class="btn sort-button btn-outline-secondary">IP Address</button>
+        <button type="button" class="btn sort-button btn-outline-secondary">Rating</button>
+      </div>
+      <label for="columnOrder">Custom Order - Drag to reorder</label>
+      <div id='custom-order' class="well well-lg"></div>
+    </div>
+
     <label for="clientName">Client Name</label>
     <input ng-model='csv.clientName' type="text" class='form-control' name="clientName" placeholder="Client name to define in feed header">
     <br>

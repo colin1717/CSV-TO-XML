@@ -1,0 +1,14 @@
+#default-order {
+  display: flex;
+  justify-content: space-around;
+
+  .sort-button {
+
+  }
+}
+
+#custom-order {
+  display: flex;
+  justify-content: space-around;
+  min-height: 75px;
+}
