@@ -100,42 +100,42 @@ function CsvController ($scope, $filter) {
   this.columns = [
     {
       name: 'SubmissionTime',
-      rank: 1,
+      index: 0,
       mode: 'view'
     },
     {
       name: 'Title',
-      rank: '2',
+      index: 1,
       mode: 'view'
     },
     {
       name: 'ReviewText',
-      rank: '3',
+      index: 2,
       mode: 'view'
     },
     {
       name: 'DisplayName',
-      rank: '4',
+      index: 3,
       mode: 'view'
     },
     {
       name: 'ExternalId',
-      rank: '5',
+      index: 4,
       mode: 'view'
     },
     {
       name: 'ReviewerLocation',
-      rank: 6,
+      index: 5,
       mode: 'view'
     },
     {
       name: 'IpAddress',
-      rank: 7,
+      index: 6,
       mode: 'view'
     },
     {
       name: 'Rating',
-      rank: 8,
+      index: 7,
       mode: 'view'
     }
   ];
