@@ -4,14 +4,11 @@
     <div>
       <label for="columnOrder">CSV Column Order - Drag to reorder</label>
       <div id='default-order' class="well">
-        <button type="button" class="btn btn-outline-secondary">SubmissionTime</button>
-        <button type="button" class="btn sort-button btn-outline-secondary">Title</button>
-        <button type="button" class="btn sort-button btn-outline-secondary">ReviewText</button>
-        <button type="button" class="btn sort-button btn-outline-secondary">DisplayName</button>
-        <button type="button" class="btn sort-button btn-outline-secondary">ExternalId</button>
-        <button type="button" class="btn sort-button btn-outline-secondary">ReviewerLocation</button>
-        <button type="button" class="btn sort-button btn-outline-secondary">IP Address</button>
-        <button type="button" class="btn sort-button btn-outline-secondary">Rating</button>
+        <div ng-repeat='column in csv.columns' ui-sortable ng-model='csv.columns'>
+          <div class="column-tab">
+            <div class='column-title'>{{ column.name }}</div>
+          </div>
+        </div>
       </div>
     </div>
 

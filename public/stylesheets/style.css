@@ -1,8 +1,12 @@
 #default-order {
   display: flex;
   justify-content: space-around; }
-
-#custom-order {
-  display: flex;
-  justify-content: space-around;
-  min-height: 75px; }
+  #default-order .column-tab {
+    height: 35px;
+    border: solid 1px black;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 2px 2px gray; }
+    #default-order .column-tab .column-title {
+      padding: 5px;
+      margin-top: 1px; }

@@ -85,4 +85,48 @@ function CsvController ($scope, $filter) {
 
     downloadLink.click();
   }
+
+  this.columns = [
+    {
+      name: 'SubmissionTime',
+      rank: 1,
+      mode: 'view'
+    },
+    {
+      name: 'Title',
+      rank: '2',
+      mode: 'view'
+    },
+    {
+      name: 'ReviewText',
+      rank: '3',
+      mode: 'view'
+    },
+    {
+      name: 'DisplayName',
+      rank: '4',
+      mode: 'view'
+    },
+    {
+      name: 'ExternalId',
+      rank: '5',
+      mode: 'view'
+    },
+    {
+      name: 'ReviewerLocation',
+      rank: 6,
+      mode: 'view'
+    },
+    {
+      name: 'IpAddress',
+      rank: 7,
+      mode: 'view'
+    },
+    {
+      name: 'Rating',
+      rank: 8,
+      mode: 'view'
+    }
+  ];
+
 }

@@ -1,5 +1,5 @@
 angular
-    .module('CsvToXml', ['ui.router', 'ngPapaParse', 'ngclipboard'])
+    .module('CsvToXml', ['ui.router', 'ngPapaParse', 'ngclipboard', 'ui.sortable'])
     .config(MainRouter);
 
   MainRouter.$inject = ['$stateProvider', '$urlRouterProvider'];
