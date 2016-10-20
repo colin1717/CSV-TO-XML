@@ -90,12 +90,15 @@ function CsvController ($scope, $filter) {
     //disabled: true
     //handle: '.well',
     'ui-floating': true,
-    update: function(e){
+    stop: function(e){
+      for (var i = 0; i < self.columns.length; i++){
+        self.columns[i].index = i;
+        console.log(self.columns[i].name + ' = ' + self.columns[i].index);
+      }
       console.log(self.columns);
     }
 
   }
-
 
   this.columns = [
     {
