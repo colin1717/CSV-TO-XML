@@ -3,8 +3,8 @@
   <div class="form-group">
     <div>
       <label for="columnOrder">CSV Column Order - Drag to reorder</label>
-      <div id='default-order' class="well">
-        <div ng-repeat='column in csv.columns' ui-sortable ng-model='csv.columns'>
+      <div id='default-order' class="well" ui-sortable='csv.sortConfig' ng-model='csv.columns'>
+        <div ng-repeat='column in csv.columns'>
           <div class="column-tab">
             <div class='column-title'>{{ column.name }}</div>
           </div>

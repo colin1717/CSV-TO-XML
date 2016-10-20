@@ -86,6 +86,17 @@ function CsvController ($scope, $filter) {
     downloadLink.click();
   }
 
+  this.sortConfig = {
+    //disabled: true
+    //handle: '.well',
+    'ui-floating': true,
+    update: function(e){
+      console.log(self.columns);
+    }
+
+  }
+
+
   this.columns = [
     {
       name: 'SubmissionTime',
