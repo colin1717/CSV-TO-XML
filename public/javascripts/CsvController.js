@@ -26,7 +26,7 @@ function CsvController ($scope, $filter) {
       self.xmlOutput += '<Product id="' + self.jsonOutput.data[i][4] +
       '"><ExternalId>'+ self.jsonOutput.data[i][4] +'</ExternalId>' +
       '<Reviews>' +
-      '<Review>' +
+      '<Review id="' + i + '">' +
       '<ModerationStatus>' + self.jsonOutput.data[i][8] + '</ModerationStatus>'
       +'<UserProfileReference id="' + self.jsonOutput.data[i][3] +'">'
       +'<ExternalId>' + self.jsonOutput.data[i][3] + '</ExternalId>'
