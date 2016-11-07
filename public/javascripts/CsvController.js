@@ -16,7 +16,14 @@ function CsvController ($scope, $filter) {
 
   this.stringToJSON = function(){
     self.jsonOutput = Papa.parse(self.csvInput);
+    self.removeSpacesOnId();
   };
+
+  this.removeSpacesOnId = function(){
+    for (var i = 0; i < self.jsonOutput.data.length; i++){
+      self.jsonOutput.data[i][3] = self.jsonOutput.data[i][3].replace(/\s/g, '');
+    }
+  }
 
   this.jsonToXml = function(){
     self.xmlOutput = '<?xml version="1.0" encoding="utf-8"?><Feed xmlns="http://www.bazaarvoice.com/xs/PRR/StandardClientFeed/5.6" name="' + self.clientName + '" extractDate="' + self.extractDate + '">';
